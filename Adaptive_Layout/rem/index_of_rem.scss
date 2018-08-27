@@ -1,0 +1,10 @@
+@function pxTorem( $px ){
+  $rem : 37.5px;
+  @return ( $px / $rem ) + rem;
+}
+
+.rem_container{
+  .test{
+    font-size: pxTorem(16px);
+  }
+}
