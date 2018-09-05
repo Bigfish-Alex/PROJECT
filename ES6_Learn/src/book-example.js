@@ -425,3 +425,102 @@ console.log('HELLO ES6!');
 	// loadUI().next();
 	
 }
+
+
+// ----------------Generator函数的异步应用----------------
+{
+// 	1.Generator函数可暂停执行和恢复执行
+// 	2.函数体内外的数据交换机制
+// 	3.错误处理机制
+// 	上述特性让generator函数可以封装异步任务
+
+		function* gen(x) {
+			var y=yield x+2;
+			return y;
+		}
+		
+		var g=gen(1);
+		// console.log( g.next() );		
+		// console.log( g.next(5) );
+		
+}
+
+
+// ----------------async函数----------------
+{
+	async function getStockPriceByName(name){
+		var symbol = await getStockSymbol(name);
+		var stockPrice = await getstockPrice(symbol);
+		return stockPrice;
+	}
+	
+	getStockPriceByName('goog').then(function(result){
+		// console.log(result)
+	})
+	
+	function getStockSymbol(name){
+		// console.log(name)
+		return name;
+	}
+	function getstockPrice(symbol){
+		var symbol=symbol+':100/股'
+		return symbol;
+	}
+	
+	
+	
+	
+	async function timeout(ms){
+		await new Promise( (resolve) => {
+			setTimeout(resolve,ms)
+		} )
+	}
+	
+	async function asyncPrint(value,ms){
+		await timeout(ms);
+		console.log(value);
+	}
+	
+	// asyncPrint('hello',1000)
+	
+	
+	
+	async function f(){
+		return 'this is aasync function'
+	}
+	
+	// f().then( v => console.log(v) )
+	
+	
+}
+
+
+// ----------------Class的基本语法----------------
+{
+// 	function Point(x,y){
+// 		this.x = x;
+// 		this.y = y;
+// 	}
+// 	Point.prototype.toString = function(){
+// 		return '('+this.x+','+this.y+')';
+// 	}
+	
+	// var p=new Point(1,2);
+	// console.log( 	p.toString() )
+	
+	//定义类
+	class Point{
+		constructor(x,y) {
+		    this.x=x;
+				this.y=y;
+		}
+		toString(){
+			return '('+this.x+','+this.y+')';
+		}
+	}
+	var p=new Point(1,2);
+	// console.log( 	p.toString() )
+	
+	
+	
+}
