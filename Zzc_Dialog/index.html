@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="zepto.min.js"></script>
+    <script src="dialog.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <button class="defaultButton">默认按钮1</button>
+    <button class="defaultButton">默认按钮2</button>
+    <button class="defaultButton">默认按钮3</button>
+    <button class="defaultButton">默认按钮4</button>
+    <button class="defaultButton">默认按钮5</button>
+    <button class="defaultButton">默认按钮6</button>
+
+    <!-- <div class="bf_dialog">
+        <div class="bf_dialog_box">
+            <div class="loading">
+              <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            <div class="bf_dialog_title">
+                提示
+            </div>
+            <div class="bf_dialog_content">
+                这是一个自定义的DIALOG!
+            </div>
+            <div class="bf_dialog_footer">
+                <button>否</button>
+                <button>是</button>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        $('.defaultButton').eq(0).click(function(){
+          var d=$.dialog();
+        })
+        $('.defaultButton').eq(1).click(function(){
+          var d=$.dialog({
+              message:'Hello Word!',
+              type:'warning',
+              buttons:[{
+                  type:"red",
+                  text:"是",
+                  callback:function(){
+                    alert('yes')
+                  }
+              },{
+                  type:"green",
+                  text:"否"
+              }],
+              // delay:3000
+          });
+        })
+        // 不传参数
+        // var dg=new Dialog();
+
+        // var d=$.dialog({
+        //     width:'100',
+        //     height:'50',
+        //     message:'Hello Word!',
+        //     type:'warning',
+        //     buttons:[{
+        //         type:"red",
+        //         text:"是",
+        //         callback:function(){
+        //           alert('yes')
+        //         }
+        //     },{
+        //         type:"green",
+        //         text:"否"
+        //     }],
+        //     delay:3000
+        // });
+    </script>
+</body>
+</html>
