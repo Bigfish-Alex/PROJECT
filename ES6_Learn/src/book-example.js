@@ -524,3 +524,143 @@ console.log('HELLO ES6!');
 	
 	
 }
+
+
+// ----------------Class的继承----------------
+{
+	class Point{
+		constructor(x,y) {
+				this.x=x;
+				this.y=y;
+		}
+		toString(){
+			return '('+this.x+','+this.y+')';
+		}
+	}
+	
+	class ColorPoint extends Point {
+		constructor(x,y,color){ 
+			super(x,y);
+			this.color=color;
+		}
+		toString(){
+			return this.color +' '+super.toString();
+		}
+	}
+	
+	const cp = new ColorPoint(1,2,'yellow');
+	// console.log( cp.toString() )
+	
+}
+
+
+// ----------------修饰器----------------
+{
+	// 修饰器(decorator)是一个函数用来修改类的行为
+// 	@testable 
+// 	class MyTestableClass{
+// 		constructor(x) {
+// 		    this.x=x;
+// 		}
+// 	}
+// 	
+// 	function testable(target){
+// 		target.isTestable=true;
+// 	}
+// 	
+// 	console.log( MyTestableClass.isTestable )
+
+}
+
+
+// ----------------Module的语法----------------
+import {personInfo,sayHi} from './profile'
+import * as circle from './circle'
+import customName from './export-default'
+
+{
+	// console.log( personInfo )
+	// sayHi()
+	// console.log( circle.area(4) )
+	// customName()
+}
+
+
+// ----------------Module的加载实现----------------
+
+var mod=require('./lib'); // commonJs require 静态传值
+
+import {counter,inCounter} from './alive'  //ES6模块 动态
+const alive = require('./alive')
+{
+	// defer async 的区别
+	// <script src="****.js" defer></script>  渲染完再执行
+	// <script src="****.js" async></script>	下载完就执行
+	
+// 	console.log( mod.counter )
+// 	mod.inCounter();
+// 	console.log( mod.counter )
+// 	
+// 	console.log(counter)
+// 	inCounter();
+// 	console.log(counter)
+
+// 	console.log(alive.counter)
+// 	alive.inCounter();
+// 	console.log(alive.counter)
+}
+
+
+// ----------------编程风格----------------
+{
+	// 1、用let取代var 尤其for循环
+	{
+		for( let i=0; i<10 ; i++ ){
+			// console.log(i)
+		}
+	}
+	// 2、lei和const之间 优先const  尤其全局环境
+	{
+		const [a,b,c]=[1,2,3];
+	}
+	// 3、静态字符串用单引号 动态用反引号
+	{
+		const a='footer';
+		const b=`foo${a}bar`;
+		// console.log(b)		
+	}
+	// 4、使用数组成员对变量赋值，优先解析赋值
+	{
+		const arr=[1,2,3,4];
+		const [first,second]=arr;
+	}
+	// 5、定义单行对象最后一个成员不以逗号结尾，定义多行以逗号结尾，对象最好勿动态添加属性名
+	{
+		const a={ k1:1,k2:2 };		
+		const b={ 
+			k1:1,
+			k2:2, 
+		};
+		const obj={
+			id:'001',
+			name:'ojbk',
+			notsure:null
+		}
+		obj.notsure='nosruevalue';
+	}
+	// 6、使用扩展运算符（...）复制数组
+	{
+		const arr1=[1,2,3];
+		const arr2=[...arr1,4,5,6];
+		// console.log(arr2)
+	}
+	// 7、立即执行函数用箭头函数
+	{	
+		(()=>{
+			// console.log('Arrow Function')
+		})()		
+	}
+	// 8、模块 使用import取代require
+	
+}
+
