@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>弹出层插件</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="zepto.min.js"></script>
@@ -12,12 +12,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <button class="defaultButton">默认按钮1</button>
-    <button class="defaultButton">默认按钮2</button>
-    <button class="defaultButton">默认按钮3</button>
-    <button class="defaultButton">默认按钮4</button>
-    <button class="defaultButton">默认按钮5</button>
-    <button class="defaultButton">默认按钮6</button>
+    <button class="defaultButton">LOADING 3S</button>
+    <button class="defaultButton">Alert提示无回调</button>
+    <button class="defaultButton">默认CONFIRM带回调</button>
+    <button class="defaultButton">多按钮多回调</button>
+    <button class="defaultButton">会话嵌套</button>
+    <button class="defaultButton"></button>
 
     <!-- <div class="bf_dialog">
         <div class="bf_dialog_box">
@@ -38,26 +38,98 @@
     </div> -->
 
     <script>
+        // 默认LOADING 3s
         $('.defaultButton').eq(0).click(function(){
           var d=$.dialog();
         })
+        // 默认alert提示无回调
         $('.defaultButton').eq(1).click(function(){
+          var d=$.dialog({'message':'Alert提示无回调'});
+        })
+        // 默认CONFIRM带回调
+        $('.defaultButton').eq(2).click(function(){
           var d=$.dialog({
-              message:'Hello Word!',
-              type:'warning',
-              buttons:[{
-                  type:"red",
-                  text:"是",
-                  callback:function(){
-                    alert('yes')
-                  }
-              },{
-                  type:"green",
-                  text:"否"
-              }],
-              // delay:3000
+            'message':'默认CONFIRM带回调',
+            buttons:[{
+                text:"否"
+            },{
+                text:"是",
+                callback:function(){
+                  alert('你点击了是')
+                }
+            }]
           });
         })
+        // 多按钮多回调
+        $('.defaultButton').eq(3).click(function(){
+          var d=$.dialog({
+            'message':'多按钮多回调',
+            buttons:[{
+              callback:function(){
+                alert('我是按钮一的回调');
+              }
+            },{
+                callback:function(){
+                  alert('我是按钮二的回调');
+                }
+            },{
+                callback:function(){
+                  alert('我是按钮三的回调,我返回了一个值，点击我不会关闭回话');
+                  return false;
+                }
+            }]
+          });
+        })
+        // 会话嵌套
+        $('.defaultButton').eq(4).click(function(){
+          var d=$.dialog({
+            "message":"会话嵌套",
+            buttons:[{
+              text:"关闭"
+            },{
+              text:"新开一个",
+              callback:function(){
+                var dd=$.dialog({
+                  'message':'我是新开的回话'
+                });
+                return false;
+              }
+            }]
+          })
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $('.defaultButton').eq(1).click(function(){
+        //   var d=$.dialog({
+        //       message:'Hello Word!',
+        //       type:'warning',
+        //       buttons:[{
+        //           type:"red",
+        //           text:"是",
+        //           callback:function(){
+        //             alert('yes')
+        //           }
+        //       },{
+        //           type:"green",
+        //           text:"否"
+        //       }],
+        //       // delay:3000
+        //   });
+        // })
         // 不传参数
         // var dg=new Dialog();
 

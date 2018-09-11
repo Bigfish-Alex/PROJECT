@@ -5,10 +5,8 @@
 
         // 默认参数配置
         this.config={
-            width:'',
-            height:'',
             message:null,
-            type:'waiting',
+            type:'normal',
             buttons:null,
             delay:null,
             maskOpacity:500
@@ -16,11 +14,12 @@
 
         // 默认参数扩展
         if( _config && $.isPlainObject(_config) ){
-            $.extend(this.config,_config)
-        }else{
+            $.extend(this.config,_config);
             this.isConfig=true;
+        }else{
+            this.isConfig=false;
         }
-        // console.log(this.config)
+        // console.log(this.isConfig)
 
         // 创建DOM
         this.body=$("body");
@@ -35,6 +34,7 @@
         // 渲染Dom
         this.creat();
     };
+    Dialog.zIndex=10000;
     Dialog.prototype={
       creat:function(){
         console.log(this.config)
@@ -49,10 +49,13 @@
             defaultButton=this.defaultButton,
             body=this.body;
 
-        if (this.isConfig) {
+        if (!this.isConfig) {
           win.append(loading);
           mask.append(win);
           body.append(mask);
+          setTimeout(function(){
+            _this_.close();
+          },3000)
         }else{
           // 对话类型
           if (config.type) {
@@ -67,6 +70,9 @@
           if (config.buttons){
               this.creatButtons(winFooter,config.buttons)
           }else{
+            defaultButton.click(function(){
+              _this_.close();
+            })
             winFooter.append(defaultButton);
             win.append(winFooter);
           }
@@ -76,15 +82,19 @@
               _this_.close();
             },config.delay)
           }
+          Dialog.zIndex++;
+          this.mask.css("z-index",Dialog.zIndex);
           this.animate();
           // 插入层
           mask.append(win);
           body.append(mask);
         }
       },
+      // 关闭对话
       close:function(){
         this.mask.remove();
       },
+      // 创建按钮
       creatButtons:function(footer,buttons){
         var _this_=this;
         $.each(buttons,function(index,elem){
@@ -95,8 +105,10 @@
           button.addClass(type);
           if(callback){
             button.click(function(e){
-              callback();
-              _this_.close();
+              var cb=callback();
+              if(cb==undefined){
+                _this_.close();
+              }
             })
           }else {
             button.click(function(){
@@ -108,6 +120,7 @@
         })
         win.append(footer);
       },
+      // 添加动画
       animate:function(){
         var _this_=this;
         this.win.css("-webkit-transform","scale(0,0)");
