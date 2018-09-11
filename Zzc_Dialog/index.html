@@ -17,7 +17,11 @@
     <button class="defaultButton">默认CONFIRM带回调</button>
     <button class="defaultButton">多按钮多回调</button>
     <button class="defaultButton">会话嵌套</button>
-    <button class="defaultButton"></button>
+    <button class="defaultButton">TOAST</button>
+
+    <!-- <div class="toast">
+        this is a toast
+    </div> -->
 
     <!-- <div class="bf_dialog">
         <div class="bf_dialog_box">
@@ -97,7 +101,14 @@
             }]
           })
         })
-
+        // TOAST
+        $('.defaultButton').eq(5).click(function(){
+          $.dialog({
+            type:'toast',
+            message:'2s后消失,默认配置3s',
+            delay:'2000'
+          })
+        })
 
 
 

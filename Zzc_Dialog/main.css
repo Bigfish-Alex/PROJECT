@@ -71,7 +71,18 @@
 }
 
 
-
+.toast{
+  padding:10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  transition: all 0.4s;
+  font-size: 14px;
+}
 
 
 
