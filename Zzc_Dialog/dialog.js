@@ -8,7 +8,8 @@
             message:null,
             type:'normal',
             buttons:null,
-            delay:null
+            delay:null,
+            hide:null
         };
 
         // 默认参数扩展
@@ -36,6 +37,7 @@
     };
     Dialog.zIndex=10000;
     Dialog.prototype={
+      // 创建DOM节点
       creat:function(){
         var _this_=this,
             config=this.config
@@ -49,13 +51,16 @@
             toast=this.toast,
             body=this.body;
 
+        // 拦截LOADING隐藏
+        if(config.hide){
+            $('.loading').parents('.bf_dialog').remove();
+            return;
+        }
+
         if (!this.isConfig) {
           win.append(loading);
           mask.append(win);
           body.append(mask);
-          setTimeout(function(){
-            _this_.close();
-          },3000)
         }else{
           // 判断对话类型
           if(config.type=='toast'){
@@ -77,6 +82,8 @@
                   _this_.toast.remove();
                 },delayTime)
               }
+          }else if(config.type=='loading'){
+
           }else{
               if (config.type) {
                 win.addClass( config.type );

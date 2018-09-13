@@ -12,34 +12,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <button class="defaultButton">LOADING 3S</button>
+    <button class="defaultButton">LOADING</button>
     <button class="defaultButton">Alert提示无回调</button>
     <button class="defaultButton">默认CONFIRM带回调</button>
     <button class="defaultButton">多按钮多回调</button>
     <button class="defaultButton">会话嵌套</button>
     <button class="defaultButton">TOAST</button>
-
-    <!-- <div class="toast">
-        this is a toast
-    </div> -->
-
-    <!-- <div class="bf_dialog">
-        <div class="bf_dialog_box">
-            <div class="loading">
-              <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            </div>
-            <div class="bf_dialog_title">
-                提示
-            </div>
-            <div class="bf_dialog_content">
-                这是一个自定义的DIALOG!
-            </div>
-            <div class="bf_dialog_footer">
-                <button>否</button>
-                <button>是</button>
-            </div>
-        </div>
-    </div> -->
+    <button class="defaultButton">回调隐藏LOADING</button>
 
     <script>
         // 默认LOADING 3s
@@ -63,7 +42,7 @@
                 }
             }]
           });
-        })
+        });
         // 多按钮多回调
         $('.defaultButton').eq(3).click(function(){
           var d=$.dialog({
@@ -110,45 +89,20 @@
           })
         })
 
+        //回调隐藏LOADING
+        $('.defaultButton').eq(6).click(function(){
+          var d=$.dialog();
+          setTimeout(function(){
+            $.dialog({
+              hide:true
+            })
+          },3000)
+        })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // $('.defaultButton').eq(1).click(function(){
-        //   var d=$.dialog({
-        //       message:'Hello Word!',
-        //       type:'warning',
-        //       buttons:[{
-        //           type:"red",
-        //           text:"是",
-        //           callback:function(){
-        //             alert('yes')
-        //           }
-        //       },{
-        //           type:"green",
-        //           text:"否"
-        //       }],
-        //       // delay:3000
-        //   });
-        // })
-        // 不传参数
-        // var dg=new Dialog();
-
+        // 例子
         // var d=$.dialog({
-        //     width:'100',
-        //     height:'50',
         //     message:'Hello Word!',
-        //     type:'warning',
+        //     type:'normal',
         //     buttons:[{
         //         type:"red",
         //         text:"是",
@@ -162,5 +116,29 @@
         //     delay:3000
         // });
     </script>
+
+    <!-- TOAST-HTML -->
+    <!-- <div class="toast">
+        this is a toast
+    </div> -->
+
+    <!-- DIALOG-HTML -->
+    <!-- <div class="bf_dialog">
+        <div class="bf_dialog_box">
+            <div class="loading">
+              <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            <div class="bf_dialog_title">
+                提示
+            </div>
+            <div class="bf_dialog_content">
+                这是一个自定义的DIALOG!
+            </div>
+            <div class="bf_dialog_footer">
+                <button>否</button>
+                <button>是</button>
+            </div>
+        </div>
+    </div> -->
 </body>
 </html>
