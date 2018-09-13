@@ -1,4 +1,15 @@
-// url
+//****************** url******************
 const url = require('url');
 const myURL = url.parse('https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash',true);
-console.log(myURL)
+// console.log(myURL)
+
+// ****************** querystring******************
+const querystring = require('querystring');
+const myUrlString=querystring.stringify({name:'alex',list:[1,2,3]},'&');
+// console.log(myUrlString);
+const stringParse=querystring.parse(myUrlString,'&');
+// console.log(stringParse);
+// console.log( querystring.escape('哈哈') );
+// console.log( querystring.unescape('%D6%D0%CE%C4') );
+
+ 
