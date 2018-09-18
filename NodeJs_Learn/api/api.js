@@ -21,3 +21,36 @@ life.on('ask',function(_who){
 })
 
 life.emit('ask','Alex');
+
+const fs = require('fs');
+// ****************** Buffer******************
+// console.log( new Buffer('HELLO') );
+
+var buf = new Buffer(7);
+buf.write('12345678');
+// console.log( buf );
+// console.log( buf.length );
+
+var bufArr = new Buffer([1,2,3,4]);
+// console.log(bufArr);
+
+
+fs.readFile('hhr.png',function(err,origin_buffer){
+  // console.log( Buffer.isBuffer( origin_buffer ) );
+  //
+  // fs.writeFile('hhr_buffer.png',origin_buffer,function(err){
+  //   if(err) console.log(err);
+  // })
+  //
+  // var base64Image = origin_buffer.toString('base64');
+  //
+  // console.log( base64Image );
+})
+
+
+// ****************** stream******************
+var source = fs.readFileSync('hhr.png');
+// fs.writeFileSync('hhr_copy.png',source);
+
+
+// var readStream = fs.cerateReadStream
