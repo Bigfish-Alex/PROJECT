@@ -53,4 +53,33 @@ var source = fs.readFileSync('hhr.png');
 // fs.writeFileSync('hhr_copy.png',source);
 
 
-// var readStream = fs.cerateReadStream
+var readStream = fs.createReadStream('document.docx')
+var n=0;
+
+readStream
+.on('data',function(chunk){
+  n++;
+  console.log(n);
+  // console.log( 'data emits' );
+  // console.log( Buffer.isBuffer(chunk) );
+  // console.log( chunk.toString('utf8') );
+
+  // readStream.pause();
+  // setTimeout( () =>{
+  //   readStream.resume()
+  // },3000 )
+
+})
+.on('readable',function(){
+  // console.log('data readable');
+})
+.on('end',function(){
+  // console.log('data ends');
+  console.log(n);
+})
+.on('close',function(){
+  // console.log('data close');
+})
+.on('error',function(){
+  // console.log('data error');
+})
