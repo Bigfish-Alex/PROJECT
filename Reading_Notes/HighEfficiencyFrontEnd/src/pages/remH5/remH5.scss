@@ -1,0 +1,66 @@
+@function px2rem($px) {
+  $rem: 37.5px;
+  @return ($px / $rem)+rem;
+}
+
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 32px;
+}
+
+header{
+  width: 100%;
+  height: px2rem(50px);
+  background: skyblue;
+  line-height: px2rem(50px);
+  font-size: px2rem(16px);
+  text-align: center;
+}
+.banner{
+  width: 100%;
+  display: block;
+  height: px2rem(180px);
+  background: #f2f2f2;
+  font-size: px2rem(18px);
+  line-height: px2rem(180px);
+  text-align: center;
+}
+.list{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: #2c3e50;
+      font-size: px2rem(16px);
+      box-sizing: border-box;
+      height: px2rem(80px);
+      text-indent: 10px;
+      line-height: px2rem(80px);
+      position: relative;
+    }
+    li:after{
+      content: '';
+      width: 100%;
+      height: px2rem(1px);
+      background: #fff;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transform: scaleY(0.5);
+    }
+    li:last-child:after{
+      height: 0px;
+    }
+  }
+}
