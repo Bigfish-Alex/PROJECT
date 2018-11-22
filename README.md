@@ -19,3 +19,5 @@
   * 4.4 module_school NodeJs的模块化简例
   
 ## 5.Reading_Notes书籍阅读记录:clap:
+  * 5.1《高效前端-Web高效编程与优化实践》
+  * 5.2《移动Web前端高效开发实践》
