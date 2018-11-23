@@ -7,7 +7,7 @@
     <p>
       HTML5 特性   语义化、本地存储、设备兼容、连接特性、多媒体、图形特效
     </p>
-    
+
     <div class="fakeElement">===</div>
     <h2>第2章：移动web开发环境搭建</h2>
     <p>
@@ -19,16 +19,58 @@
     <p>
       1.新语义 header、nav、article、section、footer...</br>
       2.表单增强 search、tel、url、email、date ...</br>
-      
+
       <form class="" action="" method="post">
         <input type="tel" name="tel" value="" placeholder="请输入手机号码" pattern="1[3-8][0-9]{9}" tltle="请输入11位手机号码">
         <input type="submit" name="" value="submit">
       </form>
       </br>
-      
-      3.
+
+      3.progress and meter contenteditable 等新元素 新属性
+      <meter value="3" min="0" max="100"></meter>
+      <progress value="44" max="100">0%</progress>
+      <br>
+
+      4.多媒体增强 <br>
+
+      5.访问设备信息（定位、调用摄像头、设备移动、） <br>
+
+      6.离线存储 <br>
+
+      7.图形处理 svg、canvas 、WebSocket、WebRTC<br>
+
+      <svg width="450" height="300" xmlns="http://www.w3.org/2000/svg">
+        <g stroke-width="10" fill="none">
+          <circle stroke="#0085c7" r="50" cy="117" cx="105"/>
+          <circle stroke="#000000" r="50" cy="117" cx="220"/>
+          <circle stroke="#df0024" r="50" cy="117" cx="335"/>
+          <circle stroke="#f4c300" r="50" cy="172" cx="162"/>
+          <circle stroke="#009f3d" r="50" cy="172" cx="278"/>
+        </g>
+      </svg>
+      <br>
+
+      8.新通信方式 PostMessage、Server Sent Event<br>
     </p>
-    
+
+
+    <div class="fakeElement">===</div>
+    <h2>第4章：CSS3必会实战技巧</h2>
+    <p>
+      1.选择器 <br>
+      2.盒模型 通过box-sizing 改变默认css和模型对元素宽高的计算方式。 <br>
+      3.个性化字体 @font-face <br>
+      4.自适应布局 <br>
+      <div class="fatherBox">
+        <div class="header">
+
+        </div>
+        <div class="content">
+
+        </div>
+      </div>
+
+    </p>
   </div>
 </template>
 

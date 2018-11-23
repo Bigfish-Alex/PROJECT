@@ -67,3 +67,15 @@ ul{
 .fakeElement:before{
   left: 70px;
 }
+
+.fatherBox{
+  width: 200px;
+  height: 200px;
+  background: #f2f2f2;
+  margin: 0 auto;
+  .header{
+    background: skyblue;
+    width: 100%;
+    height: calc(100%-20px);
+  }
+}
