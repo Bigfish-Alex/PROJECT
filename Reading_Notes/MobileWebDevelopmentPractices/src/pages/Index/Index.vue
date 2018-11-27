@@ -60,7 +60,7 @@
       1.选择器 <br>
       2.盒模型 通过box-sizing 改变默认css和模型对元素宽高的计算方式。 <br>
       3.个性化字体 @font-face <br>
-      4.自适应布局111<br>
+      4.自适应布局<br>
       <div class="fatherBox">
         <div class="header">
 
@@ -104,8 +104,9 @@
     </p>
 
     <div class="fakeElement">===</div>
-    <h2>第5章：javaScript关键语法及使用技巧</h2>
+    <h2>第6章：HTML5移动开发实践</h2>
     <p>
+      1.在地图上显示行走轨迹（高德api，无demo）
       
     </p>
   </div>
