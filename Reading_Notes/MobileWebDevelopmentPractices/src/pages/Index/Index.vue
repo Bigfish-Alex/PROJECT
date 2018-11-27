@@ -60,16 +60,53 @@
       1.选择器 <br>
       2.盒模型 通过box-sizing 改变默认css和模型对元素宽高的计算方式。 <br>
       3.个性化字体 @font-face <br>
-      4.自适应布局 <br>
+      4.自适应布局111<br>
       <div class="fatherBox">
         <div class="header">
 
         </div>
         <div class="content">
-
+          calc属性 实测无效 <br>
+          原因坑点  <br>   --- <br> !加减号前后需要空格!
         </div>
       </div>
 
+      <br>
+      5.伪类伪元素
+
+      <br>
+
+      6.响应式开发（viewport、Flex弹性盒、媒体查询、rem-font size of the root element、多列布局）
+      <div class="flexBox">
+        <div class="flexItem">
+          <span>1</span>
+        </div>
+      </div>
+
+      <div id="coll">
+        伫倚危楼风细细。望极春愁，黯黯生天际。草色烟光残照里。无言谁会凭阑意。
+
+        拟把疏狂图一醉。对酒当歌，强乐还无味。衣带渐宽终不悔。为伊消得人憔悴。
+      </div>
+
+      <br>
+      7.动画效果（Transition、Animation）
+      <div class="AnimationContainer">
+        <span>BOOM</span>
+      </div>
+
+      <br>
+      8.css3渐变
+
+      <div class="gradient">
+
+      </div>
+    </p>
+
+    <div class="fakeElement">===</div>
+    <h2>第5章：javaScript关键语法及使用技巧</h2>
+    <p>
+      
     </p>
   </div>
 </template>

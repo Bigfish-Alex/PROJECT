@@ -76,6 +76,80 @@ ul{
   .header{
     background: skyblue;
     width: 100%;
-    height: calc(100%-20px);
+    height: 20px;
   }
+  .content{
+    background: #ccc;
+    width: 100%;
+    height: calc(100% - 20px);
+    font-size: 14px;
+  }
+}
+
+.flexBox{
+  height: 200px;
+  background: #f2f2f2;
+  display: flex;
+  width: 200px;
+  margin: 5px auto;
+  .flexItem{
+    width: 60px;
+    height: 60px;
+    background: skyblue;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#coll{
+  column-width: 200px;
+  column-gap: 30px;
+  column-rule: 10px solid red;
+  margin: 15px auto;
+  width: 700px;
+  text-align: left;
+}
+
+.AnimationContainer{
+  width: 100%;
+  height: 200px;
+  span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: skyblue;
+    margin:10px auto;
+    animation: breath 1s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes breath{
+  0%{
+    width: 50px;
+    height: 50px;
+    font-size: 42px;
+    background: -webkit-linear-gradient(left,skyblue,#fff);
+    border-radius: 50%;
+  }
+  100%{
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    background: -webkit-linear-gradient(left,#fff,red);
+    color: #fff;
+    border-radius: 0%;
+  }
+}
+
+
+.gradient{
+  width: 400px;
+  height: 50px;
+  margin: 10px auto;
+  background: -webkit-linear-gradient(left,skyblue,#fff);
 }
