@@ -22,3 +22,6 @@
 ## 5.Reading_Notes书籍阅读记录:clap:
   * 5.1《高效前端-Web高效编程与优化实践》
   * 5.2《移动Web前端高效开发实践》
+  
+## 6.PetProject一些小项目demo:clap:
+  * 6.1 nodeJs的小聊天室
