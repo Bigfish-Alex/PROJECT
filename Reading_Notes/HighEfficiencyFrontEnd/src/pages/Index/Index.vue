@@ -29,6 +29,46 @@
     <div class="fakeElement">
       Or
     </div>
+    <div class="clear100"></div>
+    <h2>第二章：JS优化</h2>
+    <ul>
+      <li>1.减少前端代码耦合（低耦合高内聚）</li>
+      <li>2.避免污染全局</li>
+      <li>3.优化代码风格</li>
+      <li>4.减少作用域查询</li>
+    </ul>
+
+    <div class="clear100"></div>
+    <h2>第三章：页面优化</h2>
+    <p>
+      页面渲染流程、
+      javascript➡Style➡Layout➡Paint➡Composite
+      <br/>
+      1s/60= 16.67ms内完成
+    </p>
+    <p>
+      1.减少layout，减少页面重绘如能用transform就不用position/width/height做动画效果<br/>
+      2.减少Dom结构，用Flex比用Float需要重绘的元素少<br/>
+      3.减少head标签里的css资源<br/>
+      4.优化图片-使用响应式图片（srcset）、延迟加载图片、压缩和缓存<br/>
+      5.DNS预读取、html压缩优化
+    </p>
+    <h4>增强用户体验</h4>
+    <p>
+      1.加loading效果<br/>
+      2.过渡效果<br/>
+      3.按钮以及表单的交互效果<br/>
+      4.记住用户的一些数据，如常用滚动位置，部分表单信息<br/>
+      5.
+    </p>
+    <div class="button">
+      THIS IS A BUTTON
+    </div>
+
+
+    <div class="clear100"></div>
+    <h2>第四章：HTML5优化实践</h2>
+    
   </div>
 </template>
 
