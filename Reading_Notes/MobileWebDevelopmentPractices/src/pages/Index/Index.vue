@@ -79,7 +79,7 @@
       6.响应式开发（viewport、Flex弹性盒、媒体查询、rem-font size of the root element、多列布局）
       <div class="flexBox">
         <div class="flexItem">
-          <span>1</span>
+          <span>Flex</span>
         </div>
       </div>
 
@@ -106,8 +106,9 @@
     <div class="fakeElement">===</div>
     <h2>第6章：HTML5移动开发实践</h2>
     <p>
-      1.在地图上显示行走轨迹（高德api，无demo）
-      
+      1.在地图上显示行走轨迹（高德api，无demo） <br>
+      2.仿原生相册  <a href="gallery.html">DEMO传送门</a> <br>
+      3.Socket.IO制作小型聊天室 <br>
     </p>
   </div>
 </template>

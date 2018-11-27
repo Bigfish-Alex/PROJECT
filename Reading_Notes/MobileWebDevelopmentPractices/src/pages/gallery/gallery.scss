@@ -1,0 +1,36 @@
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  margin:0;
+  padding:0;
+}
+img{
+  display: block;
+}
+.gallery{
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  .item{
+    flex:1;
+    img{
+      width: 33vw;
+    }
+  }
+}
+.preview{
+  transition: all 0.1s;
+  touch-action:none;
+  .item{
+    display: flex;
+    margin:auto;
+    img{
+      max-width: 100vw;
+      max-height: 100ch;
+      width: inherit;
+    }
+  }
+}
