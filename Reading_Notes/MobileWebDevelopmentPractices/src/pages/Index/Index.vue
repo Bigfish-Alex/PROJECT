@@ -112,6 +112,11 @@
       4.移动端拍照上传实践   PetProject-uploadImg <br>
       5.利用Microdata进行SEO优化 (无自制demo,原理就是帮助页面实现语义化) <br>
       6.制作一个带字幕的视频播放器 <br>
+      7.使用Pixi.js 制作“抓住开学君”游戏（Canvas+WebGL） <br>
+      8.用Canvas制作刮刮卡 <br>
+      9.实战演练：实现3D全景效果 <br> <br>
+
+      详细例子看书籍demo
     </p>
   </div>
 </template>
