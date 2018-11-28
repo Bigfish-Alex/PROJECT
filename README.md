@@ -25,3 +25,4 @@
   
 ## 6.PetProject一些小项目demo:clap:
   * 6.1 nodeJs的小聊天室
+  * 6.2 upLoadImg移动端上传图片的小demo
