@@ -1,0 +1,159 @@
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  height: 10000px;
+  background: #fff;
+}
+ul{
+  li{
+    list-style: none;
+  }
+}
+
+.container_dhdg1{
+  width: 50%;
+  background: #f2f2f2;
+  margin: 0 auto;
+  overflow: hidden;
+  div{
+    width: 25%;
+    float: left;
+    background: #ececec;
+    padding:5px;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+}
+
+.container_dhdg2{
+  width: 50%;
+  margin: 10px auto;
+  display: table;
+  border-spacing: 20px;
+  div{
+    display: table-cell;
+    width: 25%;
+    border-radius: 10px;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    padding:10px;
+  }
+}
+
+.fakeElement{
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 2;
+}
+.fakeElement:after,
+.fakeElement:before{
+  content: "";
+  position: absolute;
+  top: 8px;
+  height: 1px;
+  background-color: #ccc;
+  width: 200px;
+  z-index: 1;
+}
+.fakeElement:after{
+  right: 70px;
+}
+.fakeElement:before{
+  left: 70px;
+}
+
+.fatherBox{
+  width: 200px;
+  height: 200px;
+  background: #f2f2f2;
+  margin: 0 auto;
+  .header{
+    background: skyblue;
+    width: 100%;
+    height: 20px;
+  }
+  .content{
+    background: #ccc;
+    width: 100%;
+    height: calc(100% - 20px);
+    font-size: 14px;
+  }
+}
+
+.flexBox{
+  height: 200px;
+  background: #f2f2f2;
+  display: flex;
+  width: 200px;
+  margin: 5px auto;
+  .flexItem{
+    width: 60px;
+    height: 60px;
+    background: skyblue;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#coll{
+  column-width: 200px;
+  column-gap: 30px;
+  column-rule: 10px solid red;
+  margin: 15px auto;
+  width: 700px;
+  text-align: left;
+}
+
+.AnimationContainer{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: skyblue;
+    margin:10px auto;
+    animation: breath 1s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes breath{
+  0%{
+    width: 50px;
+    height: 50px;
+    font-size: 100px;
+    background: -webkit-linear-gradient(left,skyblue,#fff);
+    border-radius: 50%;
+  }
+  100%{
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    background: -webkit-linear-gradient(left,#fff,red);
+    color: #fff;
+    border-radius: 0%;
+  }
+}
+
+
+.gradient{
+  width: 400px;
+  height: 50px;
+  margin: 10px auto;
+  background: -webkit-linear-gradient(left,skyblue,#fff);
+}
