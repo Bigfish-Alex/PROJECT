@@ -106,9 +106,12 @@
     <div class="fakeElement">===</div>
     <h2>第6章：HTML5移动开发实践</h2>
     <p>
-      1.在地图上显示行走轨迹（高德api，无demo） <br>
+      1.在地图上显示行走轨迹（高德api，无自制demo） <br>
       2.仿原生相册  <a href="gallery.html">DEMO传送门</a> <br>
-      3.Socket.IO制作小型聊天室 <br>
+      3.Socket.IO制作小型聊天室   PetProject-smallChat <br>
+      4.移动端拍照上传实践   PetProject-uploadImg <br>
+      5.利用Microdata进行SEO优化 (无自制demo,原理就是帮助页面实现语义化) <br>
+      6.制作一个带字幕的视频播放器 <br>
     </p>
   </div>
 </template>
