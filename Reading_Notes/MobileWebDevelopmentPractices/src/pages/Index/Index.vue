@@ -118,6 +118,34 @@
 
       详细例子看书籍demo
     </p>
+
+    <div class="fakeElement">===</div>
+    <h2>第7章：移动网页样式布局实战</h2>
+    <p>
+      1.静态布局的实际应用（固定宽度布局），在移动端可以通过缩放做自适应 <br>
+      2.水平居中和垂直居中实战 (移动端Flex最佳-父元素flex子元素margin auto)<br>
+      <div class="colTextVerCen">
+        <span>
+          <i>table mode</i> <br>
+          伫倚危楼风细细。望极春愁，黯黯生天际。草色烟光残照里。无言谁会凭阑意。
+
+          拟把疏狂图一醉。对酒当歌，强乐还无味。衣带渐宽终不悔。为伊消得人憔悴。
+        </span>
+      </div>
+      <div class="colTextVerCenTwo">
+        <span>
+          <i>flex mode</i> <br>
+          伫倚危楼风细细。望极春愁，黯黯生天际。草色烟光残照里。无言谁会凭阑意。
+
+          拟把疏狂图一醉。对酒当歌，强乐还无味。衣带渐宽终不悔。为伊消得人憔悴。
+        </span>
+      </div>
+    </p>
+    <p>
+      3.栅格系统实现响应式列表 <br>
+      4.Flex多栏布局实战 <br>
+    </p>
+
   </div>
 </template>
 
