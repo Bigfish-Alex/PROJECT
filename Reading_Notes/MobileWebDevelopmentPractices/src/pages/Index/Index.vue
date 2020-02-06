@@ -106,10 +106,59 @@
     <div class="fakeElement">===</div>
     <h2>第6章：HTML5移动开发实践</h2>
     <p>
-      1.在地图上显示行走轨迹（高德api，无demo） <br>
+      1.在地图上显示行走轨迹（高德api，无自制demo） <br>
       2.仿原生相册  <a href="gallery.html">DEMO传送门</a> <br>
-      3.Socket.IO制作小型聊天室 <br>
+      3.Socket.IO制作小型聊天室   PetProject-smallChat <br>
+      4.移动端拍照上传实践   PetProject-uploadImg <br>
+      5.利用Microdata进行SEO优化 (无自制demo,原理就是帮助页面实现语义化) <br>
+      6.制作一个带字幕的视频播放器 <br>
+      7.使用Pixi.js 制作“抓住开学君”游戏（Canvas+WebGL） <br>
+      8.用Canvas制作刮刮卡 <br>
+      9.实战演练：实现3D全景效果 <br> <br>
+
+      详细例子看书籍demo
     </p>
+
+    <div class="fakeElement">===</div>
+    <h2>第7章：移动网页样式布局实战</h2>
+    <p>
+      1.静态布局的实际应用（固定宽度布局），在移动端可以通过缩放做自适应 <br>
+      2.水平居中和垂直居中实战 (移动端Flex最佳-父元素flex子元素margin auto)<br>
+      <div class="colTextVerCen">
+        <span>
+          <i>table mode</i> <br>
+          伫倚危楼风细细。望极春愁，黯黯生天际。草色烟光残照里。无言谁会凭阑意。
+
+          拟把疏狂图一醉。对酒当歌，强乐还无味。衣带渐宽终不悔。为伊消得人憔悴。
+        </span>
+      </div>
+      <div class="colTextVerCenTwo">
+        <span>
+          <i>flex mode</i> <br>
+          伫倚危楼风细细。望极春愁，黯黯生天际。草色烟光残照里。无言谁会凭阑意。
+
+          拟把疏狂图一醉。对酒当歌，强乐还无味。衣带渐宽终不悔。为伊消得人憔悴。
+        </span>
+      </div>
+    </p>
+    <p>
+      3.栅格系统实现响应式列表 <br>
+      4.Flex多栏布局实战 <br>
+      5.实战演练：沪江网校首页rem布局实践 <br>
+      6.实战演练：侧边栏的滑进滑出效果 <br>
+      7.实战演练：模拟原生的页面切换效果（SPA路由切换时） <br>
+      8.提高Web动画的性能实战（使用CSS3动画、节流、） <br>
+      9.实战演练：课程分类列表实战 <br>
+
+    </p>
+
+
+    <div class="fakeElement">===</div>
+    <h2>第8章：前端工程化实战</h2>
+    <p>
+      1.前端工程化（规范代码、进行javascript预处理、进行css预处理、自动编译、缩减文件体积···） <br>
+    </p>
+
   </div>
 </template>
 

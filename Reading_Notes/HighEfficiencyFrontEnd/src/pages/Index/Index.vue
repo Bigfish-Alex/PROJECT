@@ -29,6 +29,7 @@
     <div class="fakeElement">
       Or
     </div>
+<<<<<<< .mine
     <div class="clear100"></div>
     <h2>第二章：JS优化</h2>
     <ul>
@@ -69,6 +70,86 @@
     <div class="clear100"></div>
     <h2>第四章：HTML5优化实践</h2>
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+
+
+    <h2>第二章：JS优化</h2>
+    <p>
+      1.解耦  低耦合、高内聚 <br>
+      2.书写优化
+    </p>
+
+    <h2>第三章：页面优化</h2>
+    <p>
+      <i>point：页面卡顿、打开速度、用户体验</i>
+      <br>
+      1.避免页面卡顿 1s/60fps = 16.67ms   减少layout，能用transform就不用position/width/height 简化Dom <br>
+      2.加快页面打开速度  避免head标签Js堵塞、优化图片、压缩缓存、 <br>
+      3.增强用户体验  加loading、加过度、单击输入效果优化、记住用户习惯、避免闪动
+    </p>
+
+    <h2>第四章：HTML5优化实践</h2>
+    <p>
+      1.使用H5的history改善Ajax列表请求体验 <br>
+      2.使用图标代替雪碧图 <br>
+      3.理解和使用CSS3动画 <br>
+      4.实现前端裁剪压缩图片 <br>
+      5.实现跨浏览器的HTML5表单验证 <br>
+      6.使用service worker 做PWA离线网页应用 <br>
+    </p>
+
+    <h2>第五章：前端与计算机基础</h2>
+    <p>
+      1.理解WebSocket和TCP/IP  在建立HTTP连接之前会进行TCP的三次握手<br>
+      2.理解HTTPS连接的前几毫秒发生了什么 <br>
+      3.弄懂为什么 0.1+0.2 不等于0.3 <br>
+      4.明白WebAssembly 与程序编译 （WebAssembly不需要js解释器可直接转转成编代码）<br>
+      5.理解JS与多线程 （Web Works 让js支持线程）<br>
+      6.学会JS与面向对象 <br>
+      7.了解SQL <br>
+      8.学习常用的前端算法与数据结构 <br>
+    </p>
+
+    <h2>第六章：掌握前端基础</h2>
+    <p>
+      1.掌握同源策略和跨域 <br>
+      2.掌握前端本地文件操作与上传 <br>
+      3.学会常用的CSS居中 <br>
+      4.学会常用的CSS布局技术 <br>
+      5.理解字号与行高 <br>
+      6.使用响应式开发 <br>
+      7.学习JS高级技巧 <br>
+      <i>tips：防抖是只执行重复操作的最后一次、节流是每多少时间内只执行一次</i>
+    </p>
+
+    <h2>第七章：运用恰当工具</h2>
+    <p>
+      1.前端的单元测试与自动化测试  单元测试（测试框架+断言库）Karma\mocha 自动化测试 E2E 端到端测试 protractor<br>
+      krama+jasmine+webpack
+      <br>
+      2.使用AE+bodymovie制作页面动画
+    </p>
+
+>>>>>>> .theirs
   </div>
 </template>
 

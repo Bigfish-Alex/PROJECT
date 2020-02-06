@@ -13,6 +13,9 @@ ul{
   }
 }
 
+p{
+  line-height: 26px;
+}
 .container_dhdg1{
   width: 50%;
   background: #f2f2f2;
@@ -48,7 +51,7 @@ ul{
 .fakeElement{
   position: relative;
   width: 100px;
-  margin: 0 auto;
+  margin: 20px auto;
   background: #fff;
   z-index: 2;
 }
@@ -156,4 +159,35 @@ ul{
   height: 50px;
   margin: 10px auto;
   background: -webkit-linear-gradient(left,skyblue,#fff);
+}
+.colTextVerCen{
+  width: 400px;
+  margin: 0 auto;
+  height: 200px;
+  background: #f2f2f2;
+  display: table;
+  span{
+    vertical-align: middle;
+    display: table-cell;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+.colTextVerCenTwo{
+  width: 400px;
+  margin: 10px auto;
+  height: 200px;
+  background: #f2f2f2;
+  font-size: 12px;
+  display: flex;
+  span{
+    margin:auto;
+    padding: 10px;
+  }
+}
+
+i{
+  font-size: 14px;
+  color: red;
 }
